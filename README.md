@@ -35,7 +35,7 @@ std.debug.print("{s}", .{ascii}); // Output: "Blosse".
 In your project directory:
 
 ```shell
-zig fetch --save https://code.zeptotech.net/zedd/anyascii.zig/archive/v1.2.0.tar.gz
+zig fetch --save git+https://github.com/trilowy/anyascii.zig#main
 ```
 
 In `build.zig`:
