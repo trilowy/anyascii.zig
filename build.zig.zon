@@ -1,16 +1,16 @@
 .{
-	.name = .anyascii,
-	.version = "1.2.0",
+    .name = .anyascii,
+    .version = "1.2.0",
 
-	.fingerprint = 0x99df3919abbbf2ae,
+    .fingerprint = 0x99df3919abbbf2ae,
 
-	.dependencies = .{},
+    .dependencies = .{},
 
-	.paths = .{
-		"build.zig",
-		"build.zig.zon",
-		"src",
-		"anyascii",
-		"README.md",
-	},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "anyascii",
+        "README.md",
+    },
 }
