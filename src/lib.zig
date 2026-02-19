@@ -37,10 +37,10 @@ pub fn utf8ToAscii(allocator: std.mem.Allocator, str: []const u8) ![]u8 {
 
     // Initialize a out string array list where ascii equivalents will be appended.
     var outStr = try std.ArrayList(u8).initCapacity(allocator, str.len | 15);
-    defer outStr.deinit();
+    defer outStr.deinit(allocator);
 
     // Get a writer to the array list.
-    const writer = outStr.writer().any();
+    const writer = outStr.writer(allocator).any();
 
     // For each codepoint, convert it to ascii.
     while (iterator.nextCodepoint()) |codepoint| {
@@ -48,7 +48,7 @@ pub fn utf8ToAscii(allocator: std.mem.Allocator, str: []const u8) ![]u8 {
     }
 
     // Return the built full ascii equivalent.
-    return outStr.toOwnedSlice();
+    return outStr.toOwnedSlice(allocator);
 }
 
 test anyascii {
